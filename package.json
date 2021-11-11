@@ -1,27 +1,33 @@
 {
-  "name": "webpack-with-wordpress",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "tailwindcss": "^2.2.17"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.3.7",
-    "clean-webpack-plugin": "^4.0.0",
-    "css-loader": "^6.4.0",
-    "cssnano": "^5.0.8",
-    "postcss": "^8.3.10",
-    "postcss-cli": "^9.0.1",
-    "style-loader": "^3.3.0",
-    "webpack": "^5.59.1",
-    "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.3.1"
-  }
+	"name": "webpack-with-wordpress",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"tailwind:build": "postcss css/main.css -o css/tailwind.css",
+		"tailwind:prod": "cross-env NODE_ENV=production postcss css/main.css -o css/tailwind.min.css",
+		"server": "gulp browser-sync",
+		"webpack": "webpack"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"tailwindcss": "^2.2.17"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.3.7",
+		"browser-sync": "^2.27.5",
+		"clean-webpack-plugin": "^4.0.0",
+		"cross-env": "^7.0.3",
+		"css-loader": "^6.4.0",
+		"cssnano": "^5.0.8",
+		"gulp": "^4.0.2",
+		"mini-css-extract-plugin": "^2.4.2",
+		"postcss": "^8.3.10",
+		"postcss-cli": "^9.0.1",
+		"style-loader": "^3.3.0",
+		"webpack": "^5.59.1",
+		"webpack-cli": "^4.9.1"
+	}
 }
